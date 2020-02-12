@@ -4,10 +4,10 @@ const Autocomplete = props => {
 
     const fieldRef = useRef();
     const [state, setState] = useState({
-        activeOption: 0,
-        filteredOptions: [],
-        showOptions: false,
-        userInput: ''
+        activeItem: 0,
+        filteredItems: [],
+        displayItems: false,
+        inputValue: ''
     })
 
     const [countries, setCountries] = useState(props.countries);
@@ -25,13 +25,6 @@ const Autocomplete = props => {
         }
     }, []);
 
-    // useEffect(
-    //     () => {
-    //         const countryList = countries.filter(item => !countriesArray.includes(item));
-    //         setCountries(countryList)
-    //     }, [countriesArray, dispatchSelected]
-    // )
-
     function handleAddCountries(e) {
         dispatchSelected({
             type: "add",
@@ -40,42 +33,42 @@ const Autocomplete = props => {
     }
 
     const onChange = (e) => {
-        const userInput = e.currentTarget.value;
-        const filteredOptions = countries.filter(
-            (optionName) => optionName.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+        const inputValue = e.currentTarget.value;
+        const filteredItems = countries.filter(
+            (optionName) => optionName.toLowerCase().indexOf(inputValue.toLowerCase()) > -1
         );
 
         setState({
-            activeOption: 0,
-            filteredOptions,
-            showOptions: true,
-            userInput: e.currentTarget.value
+            activeItem: 0,
+            filteredItems,
+            displayItems: true,
+            inputValue: e.currentTarget.value
         });
     };
 
     const onClick = (e) => {
         setState({
-            activeOption: 0,
-            filteredOptions: [],
-            showOptions: false,
-            userInput: e.currentTarget.innerText
+            activeItem: 0,
+            filteredItems: [],
+            displayItems: false,
+            inputValue: e.currentTarget.innerText
         });
         fieldRef.current.value = "";
         handleAddCountries(e.currentTarget.innerText)
     };
 
     const onKeyDown = (e) => {
-        const { activeOption, filteredOptions } = state;
+        const { activeItem, filteredItems } = state;
 
         if (e.keyCode === 13) {
-            const real = countries.includes(filteredOptions[activeOption])
+            const real = countries.includes(filteredItems[activeItem])
             if(!real || !fieldRef.current.value) return;
             setState({
-                activeOption: 0,
-                showOptions: false,
-                userInput: filteredOptions[activeOption]
+                activeItem: 0,
+                displayItems: false,
+                inputValue: filteredItems[activeItem]
             });
-            handleAddCountries(filteredOptions[activeOption]);
+            handleAddCountries(filteredItems[activeItem]);
             fieldRef.current.value = "";
         }
     };
@@ -103,11 +96,11 @@ const Autocomplete = props => {
                     />
 
                 {
-                    state.showOptions && state.userInput.length && state.filteredOptions.length ?
-                    <div className="list-panel uk-panel uk-background-default uk-padding-small uk-box-shadow-medium">
-                        <ul className="uk-list uk-table-hover">
+                    state.displayItems && state.inputValue.length && state.filteredItems.length ?
+                    <div className="list-panel uk-panel uk-padding-small uk-box-shadow-medium">
+                        <ul className="uk-list">
                         {
-                            state.filteredOptions.map((optionName, index) => {
+                            state.filteredItems.map((optionName, index) => {
                                 return (
                                     <li
                                         key = {optionName}
@@ -126,7 +119,7 @@ const Autocomplete = props => {
             <div className="tag-container uk-margin-top" data-uk-margin>
             {countriesArray.map((item, index) => (
                 <div key={`country_${index}`} className="icon-tags uk-label uk-border-pill uk-width-auto uk-margin-small-right">
-                    <span data-uk-icon="icon: close; ratio: 1.5" onClick={() => dispatchSelected({ type: "remove", index })} />
+                    <span data-uk-icon="icon: close; ratio: 1.15" onClick={() => dispatchSelected({ type: "remove", index })} />
                     <p>{item}</p>
                 </div>
             ))}
