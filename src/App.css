@@ -8,6 +8,12 @@
 
 .list-panel ul li {
   color: #333;
+  padding: 4px 8px;
+  margin: 0 !important;
+}
+
+.active-item {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
 .icon-tags {
