@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/orangeshark/static/css/main.ba6308fb.chunk.css",
-    "main.js": "/orangeshark/static/js/main.51226a1b.chunk.js",
-    "main.js.map": "/orangeshark/static/js/main.51226a1b.chunk.js.map",
-    "runtime-main.js": "/orangeshark/static/js/runtime-main.553a247f.js",
-    "runtime-main.js.map": "/orangeshark/static/js/runtime-main.553a247f.js.map",
-    "static/js/2.f4f91176.chunk.js": "/orangeshark/static/js/2.f4f91176.chunk.js",
-    "static/js/2.f4f91176.chunk.js.map": "/orangeshark/static/js/2.f4f91176.chunk.js.map",
-    "index.html": "/orangeshark/index.html",
-    "precache-manifest.a80c326447d0e532bd9e046815d3bdb2.js": "/orangeshark/precache-manifest.a80c326447d0e532bd9e046815d3bdb2.js",
-    "service-worker.js": "/orangeshark/service-worker.js",
-    "static/css/main.ba6308fb.chunk.css.map": "/orangeshark/static/css/main.ba6308fb.chunk.css.map",
-    "static/js/2.f4f91176.chunk.js.LICENSE.txt": "/orangeshark/static/js/2.f4f91176.chunk.js.LICENSE.txt",
-    "static/media/image1.jpg": "/orangeshark/static/media/image1.73583fa8.jpg"
+    "main.css": "/suggest-search-react/static/css/main.ba6308fb.chunk.css",
+    "main.js": "/suggest-search-react/static/js/main.51226a1b.chunk.js",
+    "main.js.map": "/suggest-search-react/static/js/main.51226a1b.chunk.js.map",
+    "runtime-main.js": "/suggest-search-react/static/js/runtime-main.ddf77397.js",
+    "runtime-main.js.map": "/suggest-search-react/static/js/runtime-main.ddf77397.js.map",
+    "static/js/2.f4f91176.chunk.js": "/suggest-search-react/static/js/2.f4f91176.chunk.js",
+    "static/js/2.f4f91176.chunk.js.map": "/suggest-search-react/static/js/2.f4f91176.chunk.js.map",
+    "index.html": "/suggest-search-react/index.html",
+    "precache-manifest.545421987876516aa84056f57e74ac39.js": "/suggest-search-react/precache-manifest.545421987876516aa84056f57e74ac39.js",
+    "service-worker.js": "/suggest-search-react/service-worker.js",
+    "static/css/main.ba6308fb.chunk.css.map": "/suggest-search-react/static/css/main.ba6308fb.chunk.css.map",
+    "static/js/2.f4f91176.chunk.js.LICENSE.txt": "/suggest-search-react/static/js/2.f4f91176.chunk.js.LICENSE.txt",
+    "static/media/image1.jpg": "/suggest-search-react/static/media/image1.73583fa8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.553a247f.js",
+    "static/js/runtime-main.ddf77397.js",
     "static/js/2.f4f91176.chunk.js",
     "static/css/main.ba6308fb.chunk.css",
     "static/js/main.51226a1b.chunk.js"
