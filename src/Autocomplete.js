@@ -14,7 +14,7 @@ const Autocomplete = props => {
     const handleChange = (e) => {
         const inputValue = e.currentTarget.value;
         const filteredItems = items.filter(
-            (optionName) => optionName.toLowerCase().indexOf(inputValue.toLowerCase()) > -1
+            x => x.toLowerCase().includes(inputValue.toLowerCase())
         );
 
         setState({
