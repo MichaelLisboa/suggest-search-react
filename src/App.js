@@ -6,8 +6,7 @@ import {countriesList} from "./Countries";
 function App() {
   return (
     <section
-        className="uk-section uk-light uk-flex uk-flex-center"
-        data-uk-height-viewport="offset-top: true;">
+        className="uk-section uk-light uk-flex uk-flex-center uk-overflow-auto">
         <div className="uk-padding uk-width-1-2@m">
             <h1>Where in the world<br />have you been?</h1>
             <Autocomplete countries={countriesList} />

@@ -3,6 +3,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  position: fixed;
   /* background-image: url('./image1.jpg');
   background-position: top center;
   background-attachment: fixed;
@@ -11,7 +12,6 @@ body {
 }
 
 #root {
-  content: “”;
   display: block;
   position: fixed;
   left: 0;
@@ -21,6 +21,7 @@ body {
   z-index: 0;
   background-color: #ccc;
   background-image: url('./image1.jpg');
+  background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
