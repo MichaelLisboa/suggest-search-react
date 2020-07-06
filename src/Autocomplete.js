@@ -149,7 +149,7 @@ const Autocomplete = props => {
             {itemsArray.map((item, index) => (
                 <div key={`country_${index}`} className="icon-tags uk-label uk-border-pill uk-width-auto uk-margin-small-right">
                     <span data-uk-icon="icon: close; ratio: 0.8" onClick={() => dispatchSelected({ type: "remove", index })} />
-                    <p>{item}</p>
+                    <p className="uk-text-truncate">{item}</p>
                 </div>
             ))}
             </div>
