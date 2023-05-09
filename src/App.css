@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  position: fixed;
+}
+
+#root {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #ccc;
+  background-image: url('./image1.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.list-panel {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding: 24px;
+  background-color: #fff;
+  color: #333;
+}
+
+.list-panel ul li {
+  color: #333;
+  padding: 4px 8px;
+  margin: 0 !important;
+}
+
+.active-item {
+  background-color: rgba(74, 176, 215, 0.25);
+}
+
+.icon-tags {
+  /* padding: 0; */
+  background-color: rgba(74, 176, 215, 0.5) !important;
+  padding: 0 20px 0 4px !important;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-tags span {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  border-radius: 50%;
+  float: left;
+  padding: 4px;
+  margin: 2px 4px 2px -2px;
+  cursor: pointer;
+}
+
+.icon-tags div {
+  margin: 0 8px 0 0;
+}
+
+.icon-tags div p {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  color: #fff;
+  margin: 0;
+  padding-right: 8px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
